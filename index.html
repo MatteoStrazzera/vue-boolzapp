@@ -58,110 +58,19 @@
                     </div>
                     <!-- contact_list -->
                     <div class="contact_list">
-                        <div class="contact d-flex">
+
+                        <div class="contact d-flex" v-for="(contact,index) in contacts">
                             <div class="user_img">
-                                <img src="./assets/img/avatar_1.jpg" alt="">
+                                <img :src="contact.avatar" :alt="contact.name">
                             </div>
                             <div class="text hide d-flex">
                                 <div class="user_name d-flex">
-                                    <span><strong>Michele</strong></span>
+                                    <span><strong>{{contact.name}}</strong></span>
                                     <span>16.15</span>
                                 </div>
                                 <p>Lorem ipsum dolor sit amet.</p>
                             </div>
                         </div>
-
-                        <div class="contact d-flex">
-                            <div class="user_img">
-                                <img src="./assets/img/avatar_2.jpg" alt="">
-                            </div>
-                            <div class="text hide d-flex">
-                                <div class="user_name d-flex">
-                                    <span><strong>Fabio</strong></span>
-                                    <span>16.05</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-
-                        <div class="contact d-flex">
-                            <div class="user_img">
-                                <img src="./assets/img/avatar_3.jpg" alt="">
-                            </div>
-                            <div class="text hide d-flex">
-                                <div class="user_name d-flex">
-                                    <span><strong>Samuele</strong></span>
-                                    <span>16.03</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-
-                        <div class="contact d-flex">
-                            <div class="user_img">
-                                <img src="./assets/img/avatar_4.jpg" alt="">
-                            </div>
-                            <div class="text hide d-flex">
-                                <div class="user_name d-flex">
-                                    <span><strong>Alessandro B.</strong></span>
-                                    <span>15.50</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-
-                        <div class="contact d-flex">
-                            <div class="user_img">
-                                <img src="./assets/img/avatar_5.jpg" alt="">
-                            </div>
-                            <div class="text hide d-flex">
-                                <div class="user_name d-flex">
-                                    <span><strong>Alessandro L.</strong></span>
-                                    <span>15.45</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-
-                        <div class="contact d-flex">
-                            <div class="user_img">
-                                <img src="./assets/img/avatar_6.jpg" alt="">
-                            </div>
-                            <div class="text hide d-flex">
-                                <div class="user_name d-flex">
-                                    <span><strong>Sara</strong></span>
-                                    <span>15.23</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-
-                        <div class="contact d-flex">
-                            <div class="user_img">
-                                <img src="./assets/img/avatar_7.jpg" alt="">
-                            </div>
-                            <div class="text hide d-flex">
-                                <div class="user_name d-flex">
-                                    <span><strong>Federico</strong></span>
-                                    <span>12.15</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-
-                        <div class="contact d-flex">
-                            <div class="user_img">
-                                <img src="./assets/img/avatar_8.jpg" alt="">
-                            </div>
-                            <div class="text hide d-flex">
-                                <div class="user_name d-flex">
-                                    <span><strong>Matteo</strong></span>
-                                    <span>10.32</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-
 
                     </div>
 
@@ -258,7 +167,7 @@
             </div>
 
         </div>
-        
+
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
