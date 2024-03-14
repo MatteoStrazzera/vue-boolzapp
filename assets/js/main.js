@@ -5,6 +5,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            selectedContact: null,
             contacts: [
                 {
                     name: 'Michele',
@@ -170,7 +171,15 @@ createApp({
             ]
         }
     },
+    methods:{
+        // selezione del contatto cliccato
+        selectContact(contact){
+            this.selectedContact = contact;
+            console.log('contatto selezionato');
+        }
+    },
     mounted(){
         console.log(this.contacts[0].name);
+        console.log();
     }
 }).mount('#app')
