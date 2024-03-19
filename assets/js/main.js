@@ -175,11 +175,11 @@ createApp({
         // selezione del contatto cliccato
         selectContact(contact){
             this.selectedContact = contact;
-            console.log('contatto selezionato');
+            console.log(contact.name);
         }
     },
     mounted(){
-        console.log(this.contacts[0].name);
-        console.log();
+        console.log(this.contacts[0].messages[2].message);
+        
     }
 }).mount('#app')

@@ -267,7 +267,7 @@ li {
         align-self: flex-end;
         padding: 1rem;
         position: relative;
-
+        justify-content: space-between;
     }
 
     & .received {
@@ -276,6 +276,7 @@ li {
         align-self: flex-start;
         padding: 1rem;
         position: relative;
+        justify-content: space-between;
     }
 }
 
