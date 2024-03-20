@@ -178,12 +178,26 @@ createApp({
             this.selectedContact = contact;
             console.log(contact.name);
         },
+        // funzione per generare un nuovo oggetto messaggio preso dall'input e inserirlo nella lista messaggi
         writeMessage() {
             console.log(this.writtenMessage);
             const newMessage = {
                 date: '10/01/2020 15:51:00',
                 message: this.writtenMessage,
                 status: 'sent'
+            }
+            this.selectedContact.messages.push(newMessage)
+            // funzione per inviare il messaggio di risposta dopo tot tempo
+            setTimeout(this.replyMessage, 1000)
+            // cancellazione del messaggio precedente da dentro l'input
+            this.writtenMessage = '';
+        },
+        // funzione per generare un nuovo oggetto messaggio come risposta
+        replyMessage() {
+            const newMessage = {
+                date: '10/01/2020 15:51:00',
+                message: 'Ok',
+                status: 'received'
             }
             this.selectedContact.messages.push(newMessage)
         }
