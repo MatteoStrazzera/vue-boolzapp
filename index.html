@@ -101,8 +101,9 @@
 
                     <div class="chat d-flex">
                         <template v-if="selectedContact != null">
-                            
-                            <div class="d-flex col-7" v-bind:class="message.status" v-for="message in selectedContact.messages">
+
+                            <div class="d-flex col-7" v-bind:class="message.status"
+                                v-for="message in selectedContact.messages">
                                 <p>
                                     {{message.message}}
                                 </p>
@@ -130,7 +131,8 @@
                         </div>
 
                         <div class="input_msg">
-                            <input type="text" class="" placeholder="Scrivi un messaggio">
+                            <input type="text" placeholder="Scrivi un messaggio" v-model="writtenMessage"
+                                @keyup.enter="writeMessage()">
                         </div>
 
                         <div class="audio">

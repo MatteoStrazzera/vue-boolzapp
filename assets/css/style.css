@@ -290,6 +290,7 @@ li {
 
     & .drop_info {
         position: absolute;
+        z-index: 1000;
         width: 12rem;
         top: 15%;
         right: 0;

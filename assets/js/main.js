@@ -6,6 +6,7 @@ createApp({
     data() {
         return {
             selectedContact: null,
+            writtenMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -171,15 +172,18 @@ createApp({
             ]
         }
     },
-    methods:{
+    methods: {
         // selezione del contatto cliccato
-        selectContact(contact){
+        selectContact(contact) {
             this.selectedContact = contact;
             console.log(contact.name);
+        },
+        writeMessage() {
+            console.log(this.writtenMessage);
         }
     },
-    mounted(){
-        console.log(this.contacts[0].messages[2].message);
-        
+    mounted() {
+        // console.log(this.contacts[0].messages[2].message);
+
     }
 }).mount('#app')
