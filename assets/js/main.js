@@ -180,6 +180,12 @@ createApp({
         },
         writeMessage() {
             console.log(this.writtenMessage);
+            const newMessage = {
+                date: '10/01/2020 15:51:00',
+                message: this.writtenMessage,
+                status: 'sent'
+            }
+            this.selectedContact.messages.push(newMessage)
         }
     },
     mounted() {
